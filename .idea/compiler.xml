@@ -8,11 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="vehicles-api" />
         <module name="pricing-service" />
+        <module name="eureka" />
         <module name="boogle-maps" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boogle-maps" target="11" />
+      <module name="eureka" target="11" />
+      <module name="eureka.iml" target="1.5" />
       <module name="pricing-service" target="11" />
       <module name="vehicles-api" target="11" />
     </bytecodeTargetLevel>
@@ -20,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="boogle-maps" options="-parameters" />
+      <module name="eureka" options="-parameters" />
       <module name="pricing-service" options="-parameters" />
       <module name="vehicles-api" options="-parameters" />
     </option>
