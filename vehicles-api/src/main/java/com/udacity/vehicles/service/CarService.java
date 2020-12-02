@@ -17,19 +17,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class CarService {
 
-    @Autowired
-    private CarRepository repository;
-    @Autowired
-    private  MapsClient mapsClient;
-    @Autowired
-    private  PriceClient priceClient;
 
-    public CarService( ) {
+    private final CarRepository repository;
+    private final MapsClient mapsClient;
+    private final PriceClient priceClient;
+
+    public CarService(CarRepository repository,MapsClient mapsClient,PriceClient priceClient ) {
         /**
          * : Add the Maps and Pricing Web Clients you create
          *   in `VehiclesApiApplication` as arguments and set them here.
-         *   autowired - I love it !! :D
+         *
          */
+        this.repository = repository;
+        this.mapsClient = mapsClient;
+        this.priceClient= priceClient;
 
     }
 
